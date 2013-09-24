@@ -29,8 +29,7 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 > ##### JavaScript
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
-> ---
-> `#bar` will be dragged around, within the constraints of `#foo`.
+> `bar` will be dragged around, within the constraints of `foo`.
 ---
 > ### Example 2
 > ##### HTML
@@ -46,7 +45,7 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
 > ---
-> `#bar` will be panned around, within the constraints of `#foo`.
+> `bar` will be panned around, within the constraints of `foo`.
 
 ### `child`
 The target element that is to be dragged. It can be any element (`div` or `img`) as long as it is pushable via the `margin` CSS attribute.
@@ -54,7 +53,7 @@ The target element that is to be dragged. It can be any element (`div` or `img`)
 ### `parent` (Optional)
 The parent of the target element, which basically forms the constraints around the target element. If undefined, the script assumes that it is the immediate parent to the target element.
 
-In *Example 1* and *Example 2*, the parent is automatically assumed to be `#foo`.
+In *Example 1* and *Example 2*, the parent is automatically assumed to be `foo`.
 
 ### `mode` (Optional)
 There are two modes, which are `"pan"` and `"move"`. If undefined, the script assumes the mode via the following rules:
