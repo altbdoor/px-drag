@@ -29,7 +29,7 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 > ##### JavaScript
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
->
+> ---
 > `#bar` will be dragged around, within the constraints of `#foo`.
 ---
 > ### Example 2
@@ -45,7 +45,7 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 > ##### JavaScript
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
->
+> ---
 > `#bar` will be panned around, within the constraints of `#foo`.
 
 ### `child`
