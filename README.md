@@ -6,7 +6,6 @@ Last updated 25 September 2013
 
 About
 -----
-
 pxDrag is a small JavaScript for object panning or "drag and drop" within a boundary. It was made after a number of frustrated attempts in using image panning plugins.
 
 
@@ -29,7 +28,8 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 > ##### JavaScript
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
-> `bar` will be dragged around, within the constraints of `foo`.
+> `bar` will be dragged around, within the constraints of `foo`.   
+
 ---
 > ### Example 2
 > ##### HTML
@@ -44,7 +44,7 @@ pxDrag accepts three arguments, which are `child`, `parent` and `mode`. Before d
 > ##### JavaScript
 >     var bar = document.getElementById('bar');
 >     var obj = new pxDrag(bar);
-> ---
+> 
 > `bar` will be panned around, within the constraints of `foo`.
 
 ### `child`
