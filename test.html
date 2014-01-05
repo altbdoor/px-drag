@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {font-family:sans-serif}
+			p {margin:0; padding:0.5em 0}
+			
+			#parentPan {border:1px solid #000; width:400px; margin:0 auto; height:200px; overflow:hidden}
+			#childPan {width:600px; height:300px}
+			
+			#parentMove {border:1px solid #000; width:400px; margin:0 auto; height:200px}
+			#childMove {width:200px; height:100px; background-color:#06c}
+		</style>
+	</head>
+	<body>
+		<h1>pxDrag</h1>
+		<p>pxDrag (pixelly Dragging) is a small JavaScript for object panning or "drag and drop" within a boundary</p>
+		<hr>
+		
+		<p>Information:</p>
+		<p><pre><code>/*
+ * pixelly dragging (pxDrag) version 2.0
+ * https://github.com/altbdoor/pxDrag
+ *
+ * Copyright (C) 2014 altbdoor
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ */</code></pre></p>
+		<hr>
+		
+		<h3>Pan Mode</h3>
+		<div id="parentPan">
+			<div id="childPan">
+				<p>The mode is pan, where the element inside is panned around, within the boundaries of its parent element.</p>
+				<p>To prevent the element inside from spilling out, please do remember to set the parent to <code>overflow:hidden</code></p>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<h3>Move Mode</h3>
+		<div id="parentMove">
+			<div id="childMove">
+				<p>The mode is move, where the element inside is moved around, within the boundaries of its parent element.</p>
+			</div>
+		</div>
+		
+		<script src="pxDrag.js"></script>
+		<script>
+			function get (id) {
+				return document.getElementById(id);
+			}
+			
+			pxDrag({
+				child:get('childPan')
+			});
+			
+			pxDrag({
+				child:get('childMove')
+			});
+		</script>
+	</body>
+</html>
