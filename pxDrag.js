@@ -1,5 +1,5 @@
 /*
- * pxDrag (pixelly Dragging) version 2.0
+ * pxDrag (pixelly Dragging) version 2.1
  * https://github.com/altbdoor/pxDrag
  *
  * Copyright (C) 2014 altbdoor
@@ -17,7 +17,7 @@ var pxDrag = (function () {
 		};
 	
 	// event.preventDefault
-	if (Event.prototype.preventDefault) {
+	if (typeof(Event) !== 'undefined' && Event.prototype.preventDefault) {
 		_preventDefault = function (e) {
 			e.preventDefault();
 		}
@@ -30,7 +30,7 @@ var pxDrag = (function () {
 	}
 	
 	// event.stopPropagation
-	if (Event.prototype.stopPropagation) {
+	if (typeof(Event) !== 'undefined' && Event.prototype.stopPropagation) {
 		_stopPropagation = function (e) {
 			e.stopPropagation();
 		}
@@ -43,7 +43,7 @@ var pxDrag = (function () {
 	}
 	
 	// event.addEventListener and event.removeEventListener
-	if (Element.prototype.addEventListener) {
+	if (typeof(window.addEventListener) !== 'undefined') {
 		_addEventListener = function (elem, type, listener) {
 			elem.addEventListener(type, listener, false);
 		}
@@ -119,6 +119,7 @@ var pxDrag = (function () {
 			diffX = e.clientX - childX;
 			diffY = e.clientY - childY;
 			
+			_preventDefault(e);
 			_stopPropagation(e);
 			
 			// prevent selection
